@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:fillViewport="true"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.lml.talkbot.CustomView.CustomEditText
+                android:id="@+id/editor"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:backgroundTint="#00FFFFFF"
+                android:fontFamily="@font/main"
+                android:inputType="textMultiLine"
+                android:paddingLeft="20dp"
+                android:paddingBottom="16dp"
+                android:textSize="15sp" />
+        </ScrollView>
+
+    </HorizontalScrollView>
+</LinearLayout>

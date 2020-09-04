@@ -1,0 +1,21 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.lml.talkbot.Activity.MainActivity">
+    <item
+        android:id="@+id/save"
+        android:orderInCategory="100"
+        android:title="저장"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/savereload"
+        android:orderInCategory="100"
+        android:title="저장 후 컴파일"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/usehi"
+        android:orderInCategory="100"
+        android:title="하이라이팅 비사용"
+        app:showAsAction="never" />
+
+</menu>

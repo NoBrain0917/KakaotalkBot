@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/editor"
+        android:title="Editor"
+        android:icon="@drawable/ic_edit_black_24dp" />
+
+    <item
+        android:id="@+id/debug"
+        android:title="Debug"
+        android:icon="@drawable/ic_chat_black_24dp"/>
+
+    <item
+    android:id="@+id/log"
+    android:title="Log"
+    android:icon="@drawable/ic_error_black_24dp" />
+
+
+</menu>
