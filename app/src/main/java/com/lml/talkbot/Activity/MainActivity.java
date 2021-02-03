@@ -158,13 +158,7 @@ public class MainActivity extends AppCompatActivity {
                 ok.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        String ms = "function response(room, msg, sender, isGroupChat, replier, ImageDB) {\n" +
-                                "    /*(String)room - 방의 이름을 가져옵니다.\n" +
-                                "    (String)msg - 보낸 메세지를 가져옵니다.\n" +
-                                "    (String)sender - 보낸 상대의 이름을 가져옵니다.\n" +
-                                "    (Boolean)isGroupChat - 그룹채팅인지 여부를 가져옵니다.\n" +
-                                "    (Replier)replier - 알림받은 채팅방으로 답장할수 있는 객체입니다.\n" +
-                                "    (ImageDB)ImageDB - 이미지 정보를 담고 있는 객체입니다.*/\n" +
+                        String ms = "function onMessage(message) {\n\n" +
                                 "}";
                         if (name.getText().toString().length() > 0) {
                             Toast.makeText(MainActivity.this, "생성하였습니다. (" + name.getText() + ".js)", Toast.LENGTH_SHORT).show();
