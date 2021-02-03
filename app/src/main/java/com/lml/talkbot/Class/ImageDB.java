@@ -14,7 +14,7 @@ public class ImageDB {
         this.profileImage = profileImage;
     }
 
-    public static String getProfileImage(){
+    public String getProfileImage(){
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         profileImage.compress(Bitmap.CompressFormat.PNG,100,baos);
         byte[] ba=baos.toByteArray();
