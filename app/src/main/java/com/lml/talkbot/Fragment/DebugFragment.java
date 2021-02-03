@@ -152,14 +152,18 @@ public class DebugFragment extends Fragment {
                         BitmapDrawable bd = (BitmapDrawable) r.getDrawable(R.drawable.lovely_doomfist);
                         Bitmap bitmap = bd.getBitmap();
                         Message message = new Message();
-                        message.setContext(ctx);
-                        message.setDebug(true);
-                        //message.setBitmap(bitmap);
-                        message.setMessage(msg);
-                        message.setRoom(room);
-                        message.setSender(sender);
-                        message.setGroupChat(groupchat);
-                        message.channel.name;
+                        String profile = new ImageDB(bitmap).getProfileImage();
+                        message.ctx = getContext();
+                        message.isDebug = true;
+                        message.content = msg;
+                        message.channel.name = room;
+                        message.channel.id = String.valueOf(room.hashCode());
+                        message.channel.group = groupchat;
+                        message.author.name = sender;
+                        message.author.id = String.valueOf(sender+profile.hashCode());
+                        message.attachment.image = null;
+                        message.author.profile = profile;
+
 
                         res.get(name).call(parseContext, scope.get(name), scope.get(name), new Object[]{message});
 
