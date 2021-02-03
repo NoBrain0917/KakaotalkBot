@@ -290,13 +290,18 @@ public class TalkBotListener extends NotificationListenerService {
                         try {
                             if (resp.get(name) != null) {
                                 Message message = new Message();
-                                message.setContext(ctx);
-                                message.setDebug(false);
-                                message.setBitmap(profileImage);
-                                message.setMessage(msg);
-                                message.setRoom(room);
-                                message.setSender(sender);
-                                message.setGroupChat(isGroupChat);
+                                String profile = new ImageDB(profileImage).getProfileImage();
+                                message.ctx = ctx;
+                                message.isDebug = false;
+                                message.content = msg;
+                                message.session = session;
+                                message.channel.name = room;
+                                message.channel.id = String.valueOf(room.hashCode());
+                                message.channel.group = isGroupChat;
+                                message.author.name = sender;
+                                message.author.id = String.valueOf(sender+profile.hashCode());
+                                message.attachment.image = null;
+                                message.author.profile = profile;
                                 resp.get(name).call(parseContext, scope.get(name), scope.get(name), new Object[]{message});
                             }
                         } catch (Exception e) {
